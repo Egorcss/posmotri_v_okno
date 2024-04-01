@@ -107,18 +107,26 @@ input[type="text"] {
   appearance: none;
   background-color: transparent;
   border-right: none;
+  border-left: none;
   width: 225px;
   border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
   font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
   text-align: left;  
-  padding-right: 10px;
+  padding: 2.5px 12px 2.5px 0px;
 }
 
+input[type="text"]::placeholder {
+  color: rgb(255 255 255 / 0.7);
+}
+
+/* теперь у текста появляется нижнее подчеркивание при наведении
+на область label */
 .search-form__label:hover .search-form__label-text {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .search-form__textfield:focus {
@@ -290,6 +298,10 @@ fieldset {
   margin: 2px;
 }
 
+.content__card-link:active {
+  background-color: inherit;
+}
+
 .content__card-link_current {
   background-color: var(--gray);
 }
@@ -302,7 +314,6 @@ fieldset {
   outline: 1px solid var(--white);
 }
 
-.search-form__checkbox-list:hover,
 .content__card-link:hover {
   text-decoration: underline;
 }
